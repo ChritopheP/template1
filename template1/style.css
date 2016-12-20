@@ -1,0 +1,167 @@
+.dropdown {
+    float: right;/*mettre a droite*/
+}
+
+ul { /*ensemble image+dropbtn*/
+    list-style-type: none;/*liste */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li { /*tous les "li" à gauche*/
+    float: left;/*gauche*/
+}
+
+li a, .dropbtn { /*tous les "a" contenu dans dropbtn, changer le graphisme*/
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-right: 4em;
+}
+
+li a:hover, .dropdown:hover .dropbtn { /*changer le background quand on passe la souris dessus+le cacher*/
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;/*meme fonction que le float simple*/
+}
+
+.dropdown-content {/* changer graphisme des onglets du menu deroulant+le cahcher hors cover*/ 
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {/*re afficher le dropdown lors du hover*/
+    display: block;
+}
+
+section {/*section même taille*/
+    width: 30%;
+    border: 1px solid black;
+    height: 13em;
+    box-sizing: border-box;
+    margin: 1em;
+    background-color: #CCC;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3em;
+    align-items: center;
+    align-content: center;
+    justify-content: center;    
+}
+
+#texte_hover {
+    overflow: hidden;
+}
+
+#free1 {
+    
+    overflow: hidden;
+    position: relative;
+}
+
+#free1 img {
+    
+    max-height: 200%;
+    
+}
+#free2 img {
+    
+    max-height: 200%;
+}
+#free2{
+    
+    overflow: hidden;
+    
+}
+#texte_hover img {
+    max-height: 110%;
+}
+
+#miniatures {
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#miniatures:hover img:nth-child(1),
+#miniatures:hover img:nth-child(3),/*caché les images choisie*/
+#miniatures:hover img:nth-child(6),
+#miniatures:hover img:nth-child(8){
+    filter: contrast(0.2);
+    transition: ease 0.5s;
+}
+
+.images_logos {
+    width: 4em;
+    margin: 0.35em;
+    /*height: 50px;*/
+}
+
+
+#texte {
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#texte p:nth-child(odd) { /*impair*/
+    
+    background-color: #f9f9f9;
+    
+}
+
+#texte p {
+    border: 1px solid black;
+}
+#texte:hover p:last-child {
+    
+    order: -1;
+    align-self: center;
+}
+#texte:hover p:last-child(2) {
+    
+    order: 1;
+    align-self: center;
+}
+/*#logo {
+    
+    position: absolute  ;
+    top: 0px;
+    left: 0px;
+    width: 30%;
+    height: 30%;
+}*/
+
+
+#free1 p { /*mettre couleur, regler taille et position et cacher le texte*/
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  line-height: 13em;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  
+}
+
+#free1:hover p {/*afficher texte*/
+  opacity: 1;
+}
